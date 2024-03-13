@@ -1,0 +1,55 @@
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+p {
+font-family:'Fira Sans',sans-serif; font-size:16px;
+}
+
+p.large {
+font-family:sans-serif; font-size:16px;
+}
+
+p.abstract {
+font-family:sans-serif; font-size:12px; color="#006400"
+}
+
+h1 {
+font-family: 'Fira Sans', sans-serif;
+}
+
+h2 {
+font: 20px arial,sans-serif
+}
+
+dd {
+font-family:arial; font-size:16px;
+}
+
+dd.email {
+font-family:courier; font-size:16px;
+}
+
+dt {
+font-family:sans-serif; font-size:14px; 
+}
+
+dt.title {
+font-family:sans-serif; font-size:14px; font-weight:bold
+}
+
+dt.author {
+font-family:sans-serif; font-size:14px;
+}
+
+dt.venue {
+font-family:sans-serif; font-size:14px; color:#610B0B
+}
+
+dt.comment {
+font-family:sans-serif; font-size:12px; color:#FF0000
+}

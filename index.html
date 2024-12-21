@@ -4,7 +4,7 @@
 
 <head> 
 <title>Hadley Black’s webpage</title> 
-<link rel="stylesheet" type="text/css" href=“hblack.css" />
+<link rel="stylesheet" type="text/css" href="mystyle.css?v=1.01" />
 <link rel="icon" href="http://www.yoursite.com/favicon.ico?v=2" />
 
 <style>
@@ -23,48 +23,67 @@
 
 <br><br>
 
-   <table border="0" width="1000" align="center">
+   <table border="0" width="850" align="justify">
       <tr>
-      <td width=“300”>
-         <img src="./ucsd.jpg" style="height:400px;margin-top:-20px" class="rotate0" />
-      </td>
+      
 
-      <td width=“500” valign="top">
+
+      <td width=“400” valign="top">
 	 
+
+
          <dl>
-         <dd><h1><b> Hadley Black </b></h1></dd>
+         <h1><b> Hadley Black </b></h1>
          <dd> <i> Postdoctoral Researcher </i></dd>
          <dd> University of California, San Diego </dd>
          <dd> EnCORE Institute </dd>
-	     <dd> &nbsp; </dd>
+	       <dd> &nbsp; </dd>
 	
-         <!-- <dd> Lab: Engineering VI - 497 </dd> -->
          <dd class="email"> email: hablack[at]ucsd[dot]edu </dd>
-         <dd> &nbsp; </dd>
          
          <dd> <a href=cv.pdf>My CV</a> </dd>
 
-         
-         <dd> <h4>Short Bio</h4> I am a postdoc in the Computer Science department at UCSD, affiliated with the <a href="https://encore.ucsd.edu/">EnCORE Institute</a>, where I am fortunate to be advised by <a href="https://barnasaha.net/">Barna Saha</a>. I completed my PhD in Computer Science at UCLA in 2023 under the sage guidance of <a href="https://raghumeka.github.io/">Raghu Meka</a>. Prior to that I received my MS in Computer Science from UCSC in 2018 where I was very lucky to work with <a href="https://users.soe.ucsc.edu/~sesh/">C. Seshadhri</a>. I completed a BA in Computer Science and BA in Mathematics from UCSC in 2016. </dd>
-         <dd> <h4>Research Interests</h4> I am a theoretical computer scientist specializing in sublinear algorithms and learning theory. </dd>
-            
          <dd> &nbsp; </dd>
-         
-         </dl>
+
+         <dd> I am on the job market for faculty positions beginning Fall 2025! </dd>
+
+
       </td>
+
+      <td width=“300”>
+         <img src="./ucsd.jpg" style="height:250px;margin-top:-20px" class="rotate0" />
+      </td>
+         
       </tr>
+
+
  
 
+<td width="500" valign="top" align="justify" colspan="2">    
+
+
+<hr>
+         
 
 
 <tr>
-<td width="950" valign="top" align="justify" colspan="2">		
-<div class="border"></div>
+<td width="1000" valign="top" align="justify" colspan="2">		
 <br>
 
 </dl> 
 
+
+<dd> <h3>Short Bio</h3> 
+
+I am a postdoc in the Computer Science department at UCSD, affiliated with the <a href="https://encore.ucsd.edu/">EnCORE Institute</a>, where I am fortunate to be advised by <a href="https://barnasaha.net/">Barna Saha</a>. I completed my PhD in Computer Science at UCLA in 2023 under the sage guidance of <a href="https://raghumeka.github.io/">Raghu Meka</a>. Prior to that I received my MS in Computer Science from UCSC in 2018 where I was very lucky to work with <a href="https://users.soe.ucsc.edu/~sesh/">C. Seshadhri</a>. I completed a BA in Computer Science and BA in Mathematics from UCSC in 2016. </dd>
+
+<dd> <h3>Research Interests</h3> I am broadly interested in theoretical computer science with a special focus on sublinear algorithms and computational learning theory. </dd>
+            
+<dd> &nbsp; </dd>
+
+
 <hr> 
+
 
 <h2>Publications</h2>
 
@@ -75,9 +94,23 @@
 
 <dt class="title">  &#8226; <b> Learning Partitions with Simple Queries: Minimizing Complexity, Adaptivity, and Size </b> </dt> 
 <dt class="author"> Hadley Black, Arya Mazumdar, Barna Saha </dt>
-<font size="3" color="#CB4335"> <i> Preprint, 2024. </i> </font>
+<font size="3" color="#f34e4e"> <i> Preprint, 2024. </i> </font>
 <dt> 
+[<a href="javascript:toggle('clustering-pair-queries')">short summary</a>]
 
+
+<div id="clustering-pair-queries" style="display: none">
+<div align="justify"><font color="#7300fd" size="2" face="Open Sans"> <BR>
+
+  <p> We study the "clustering by crowdsourcing" problem where one wishes to reconstruct a hidden <i>k</i>-partition over <i>n</i> elements with access to a pair-query oracle that answers the question "do these two elements belong to the same set?". The goal is to learn the partition exactly while minimizing the number of queries. It is well known that <i>&Theta;(nk)</i> is necessary and sufficient for adaptive algorithms and <i>&Theta;(n<sup>2</sup>)</i> is necessary and sufficient for non-adaptive algorithms. In terms of adaptivity, previous known algorithms using <i>O(nk)</i> queries used <i>k-1</i> rounds. Minimizing adaptivity is desirable since this allows many queries to be asked in parallel. </p>
+
+  <p><i> What is the fewest rounds of adaptivity that suffice to obtain the optimal <i>O(nk)</i> query complexity? In general, if an algorithm is allowed <i>r</i> rounds of adaptivity, what is the best possible query complexity?  </i></p>
+
+  <p> We obtain an algorithm making <i>O(nk)</i> queries, using only <i>O(loglog n)</i> rounds which is a double-exponential improvement over previous works for reasonably large <i>k</i>. Additionally, for every constant <i>r > 0</i> we characterize the query complexity of algorithms using <i>r</i> rounds, interpolating between the <i>&Theta;(n<sup>2</sup>)</i> non-adaptive and <i>&Theta;(nk)</i> adaptive settings. </p>
+
+  <p> We also study the subset query model where the algorithm can query a subset of at most <i>s</i> elements and the oracle returns the number of sets in the partition intersecting the query. We show that the non-adaptive query complexity of this problem is <i>~&Theta;(n<sup>2</sup> / s<sup>2</sup>)</i>, answering a question left open from our previous NeurIPS '24 paper. For adaptive algorithms we show that the query complexity is <i>~&Theta;(nk / s<sup>2</sup>)</i> and we obtain an interpolation between these two cases in terms of rounds of adaptivity, similar to our result for the pair query model. </p>
+
+</font></div> </div>
 
 </ul> 
 
@@ -88,11 +121,19 @@
 
 <dt class="title">  &#8226; <b> Clustering with Non-adaptive Subset Queries </b> </dt> 
 <dt class="author"> Hadley Black, Euiwoong Lee, Arya Mazumdar, Barna Saha </dt>
-<font size="3" color="#CB4335"> <i> Neural Information Processing Systems (<b>NeurIPS</b>) 2024. </i> </font>
+<font size="3" color="#f34e4e"> <i> Neural Information Processing Systems (<b>NeurIPS</b>) 2024. </i> </font>
 <dt> 
 
 [<A HREF="https://arxiv.org/abs/2409.10908">arXiv</A>] 
+&nbsp; &nbsp; [<a href="javascript:toggle('clustering-subset-queries')">short summary</a>]
 
+
+<div id="clustering-subset-queries" style="display: none">
+<div align="justify"><font color="#7300fd" size="2" face="Open Sans"> <BR>
+
+  <p> Over the last decade there has been a lot of interest by the learning theory community in "clustering by crowdsourcing" where the goal is to learn a hidden <i>k</i>-partition over <i>n</i> elements with the ability to ask whether two elements belong to the same set or not (pair queries). Our aim in this work is to design <i>non-adaptive</i> algorithms for this task, which are able to ask all of their queries in parallel. However, there is an <i>n<sup>2</sup></i> pair query lower bound for non-adaptive algorithms, even when <i>k = 3</i>. To go beyond this quadratic barrier, we study a generalized query model where the algorithm can ask for the number of sets in the partition intersecting a queried subset. Chakrabarty-Liao (FSTTCS 24) obtained an <i>O(n)</i> query adaptive algorithm and this query complexity is optimal. We obtain a <i>non-adaptive</i> algorithm which comes very close to the optimal query complexity, up to factors of <i>(log k + loglog n)</i>. We also study the setting where the algorithm is only allowed to query subsets of size at most <i>s</i>, and show upper and lower bounds of <i>~O(n<sup>2</sup> k / s<sup>2</sup>)</i> and <i>&Omega;(n<sup>2</sup> / s<sup>2</sup>)</i>. Finally, we also obtain results for the special case of recovery roughly-balanced partitions and algorithms using two rounds of adaptivity. <p/>
+
+</font></div> </div>
 
 </ul> 
 
@@ -101,9 +142,9 @@
 <ul>
 
 
-<dt class="title">  &#8226; <b> Nearly Optimal Bounds for Sample-Based Testing and Learning of k-Monotone Functions </b> </dt> 
+<dt class="title">  &#8226; <b> Nearly Optimal Bounds for Sample-Based Testing and Learning of <i>k</i>-Monotone Functions </b> </dt> 
 <dt class="author"> Hadley Black </dt>
-<font size="3" color="#CB4335"> <i> International Conference on Randomization and Computation (<b>RANDOM</b>) 2024. </i> </font>
+<font size="3" color="#f34e4e"> <i> International Conference on Randomization and Computation (<b>RANDOM</b>) 2024. </i> </font>
 <dt> 
 [<A HREF="https://arxiv.org/abs/2310.12375">arXiv</A>] 
 &nbsp; &nbsp; [<a href="javascript:toggle('sample-based-monotonicity-testing')">short summary</a>]
@@ -111,11 +152,9 @@
 
 
 <div id="sample-based-monotonicity-testing" style="display: none">
-<div align="justify"><font color="#006400" size="3" face="Times"> <BR>
+<div align="justify"><font color="#7300fd" size="2" face="Open Sans"> <BR>
 
-  <p> We study monotonicity testing of functions $f \colon \{0,1\}^d \to \{0,1\}$ using \emph{sample-based} algorithms, which are only allowed to observe the value of $f$ on points drawn independently from the uniform distribution. A classic result by Bshouty-Tamon (J. ACM 1996) proved that monotone functions can be learned with $\exp(O(\min\{\frac{1}{\eps}\sqrt{d},d\}))$ samples and it is not hard to show that this bound extends to testing. Prior to our work the only lower bound for this problem was $\Omega(\sqrt{\exp(d)/\varepsilon})$ in the small $\eps$ parameter regime, when $\varepsilon = O(d^{-3/2})$, due to Goldreich-Goldwasser-Lehman-Ron-Samorodnitsky (Combinatorica 2000). Thus, the sample complexity of monotonicity testing was wide open for $\eps \gg d^{-3/2}$. We resolve this question, obtaining a tight lower bound of $\exp(\Omega(\min\{\frac{1}{\eps}\sqrt{d},d\}))$ for all $\eps$ at most a sufficiently small constant. In fact, we prove a much more general result, showing that the sample complexity of $k$\emph{-monotonicity} testing and learning for functions $f \colon \{0,1\}^d \to [r]$ is $\exp(\Theta(\min\{\frac{rk}{\eps}\sqrt{d},d\}))$. For testing with one-sided error we show that the sample complexity is $\exp(\Theta(d))$. </p>
-
-  <p> Beyond the hypercube, we prove nearly tight bounds (up to polylog factors of $d,k,r,1/\eps$ in the exponent) of $\exp(\widetilde{\Theta}(\min\{\frac{rk}{\varepsilon}\sqrt{d},d\}))$ on the sample complexity of testing and learning measurable $k$-monotone functions $f \colon \mathbb{R}^d \to [r]$ under product distributions. Our upper bound improves upon the previous bound of $\exp(\widetilde{O}(\min\{\frac{k}{\varepsilon^2}\sqrt{d},d\}))$ by Harms-Yoshida (ICALP 2022) for Boolean functions ($r=2$). </p>
+  <p> Testing monotonicity of Boolean functions is a classic property testing problem dating back to the origins of the field. Most of the literature has focused on the setting where the tester is allowed to request the value of the function at any point (query-access). If you allow access only to uniform random examples then there is an algorithm using roughly <i>exp(&radic;d))</i> samples which comes from coverting a learning algorithm for monotone functions due to Bshouty-Tamon (J. ACM 1996) into a tester. In this work we obtain a nearly matching lower bound for sample-based testing, showing that this is essentially the best you can do. We also prove nearly optimal lower bounds for functions with larger ranges, and obtain an improved learner/tester for functions over hypergrids and continuous d-dimensional domains. <p/>
 
 </font></div> </div>
 
@@ -130,7 +169,7 @@
 
 <dt class="title">  &#8226; <b> Testing and Learning Convex Sets in the Ternary Hypercube </b> </dt> 
 <dt class="author"> Hadley Black, Eric Blais, and Nathaniel Harms </dt>
-<font size="3" color="#CB4335"> <i> Innovations in Theoretical Computer Science (<b>ITCS</b>) 2024. </i> </font>
+<font size="3" color="#f34e4e"> <i> Innovations in Theoretical Computer Science (<b>ITCS</b>) 2024. </i> </font>
 <dt> 
 [<A HREF="https://arxiv.org/abs/2305.03194">arXiv</A>] 
 &nbsp; &nbsp; [<a href="javascript:toggle('ternary-cube-convexity-testing')">short summary</a>]
@@ -138,15 +177,15 @@
 
 
 <div id="ternary-cube-convexity-testing" style="display: none">
-<div align="justify"><font color="#006400" size="3" face="Times"> <BR>
+<div align="justify"><font color="#7300fd" size="2" face="Open Sans"> <BR>
 
-  <p> We study the problems of testing and learning high-dimensional discrete convex sets. The simplest high-dimensional discrete domain where convexity is a non-trivial property is the ternary hypercube, $\{-1,0,1\}^n$. The goal of this work is to understand structural combinatorial properties of convex sets in this domain and to determine the complexity of the testing and learning problems. We obtain the following results. </p>
+  <p> Testing convexity of sets in high-dimensions is an extremely natural property testing question for which our understanding is very limited. Thus, the goal of this work is to understand this question over the simplest high-dimensional domain where it can be studied: the ternary hypercube, <i>{-1,0,1}<sup>n</sup></i>. We obtain the following results. </p>
 
-  <p> <i> Structural: </i> We prove nearly tight bounds on the edge boundary of convex sets in $\{0,\pm 1\}^n$, showing that the maximum edge boundary of a convex set is $\widetilde \Theta(n^{3/4}) \cdot 3^n$, or equivalently that every convex set has influence $\widetilde{O}(n^{3/4})$ and a convex set exists with influence $\Omega(n^{3/4})$. </p>
+  <p> <i> Structural: </i> We prove that the maximum edge boundary of convex sets in the ternary cube is <i>&Theta;(n<sup>3/4</sup>)</i> <i>3<sup>n</sup></i>. </p>
 
-  <p> <i> Learning and sample-based testing: </i> We prove upper and lower bounds of $3^{\widetilde{O}(n^{3/4})}$ and $3^{\Omega(\sqrt{n})}$ for the task of learning convex sets under the uniform distribution from random examples. The analysis of the learning algorithm relies on our upper bound on the influence. Both the upper and lower bound also hold for the problem of sample-based testing with two-sided error. For sample-based testing with one-sided error we show that the sample-complexity is $3^{\Theta(n)}$. </p>
+  <p> <i> Testing and learning with sample-access: </i> We prove upper and lower bounds for the task of testing and learning convex sets under the uniform distribution from random examples. </p>
 
-  <p> <i> Testing with queries: </i> We prove nearly matching upper and lower bounds of $3^{\widetilde{\Theta}(\sqrt{n})}$ for one-sided error testing of convex sets with non-adaptive queries.  </p>
+  <p> <i> Testing with query-access: </i> We prove nearly matching upper and lower bounds for one-sided error testing of convex sets with non-adaptive queries.  </p>
 
 </font></div> </div>
 
@@ -160,9 +199,18 @@
 <ul>
 
 
-<dt class="title">  &#8226; <b> A d^{1/2+o(1)} Monotonicity Tester for Boolean Functions on d-Dimensional Hypergrids </b> </dt> 
+<dt class="title">  &#8226; <b> A <i>d<sup>1/2+o(1)</sup></i> Monotonicity Tester for Boolean Functions on <i>d</i>-Dimensional Hypergrids </b> </dt> 
 <dt class="author"> Hadley Black, Deeparnab Chakrabarty, and C. Seshadhri</dt>
-<font size="3" color="#CB4335"> <i> Foundations of Computer Science (<b>FOCS</b>) 2023. Invited to <b>SICOMP</b> special issue. </i></font>
+
+<dt> 
+<font size="3" color="#f34e4e"> <i> Foundations of Computer Science (<b>FOCS</b>) 2023. </i></font> 
+</dt> 
+
+<dt> 
+<font size="3" color="#df3fc9"> <i> Invited to <b>SICOMP</b> special issue. </i></font>
+</dt> 
+
+
 <dt> 
 [<A HREF="https://arxiv.org/abs/2304.01416">arXiv</A>]
 &nbsp; &nbsp; [<A HREF="https://eccc.weizmann.ac.il/report/2023/048/">ECCC</A>]
@@ -171,13 +219,13 @@
 
 
 <div id="shifted-path-tester" style="display: none">
-<div align="justify"><font color="#006400" size="3" face="Times"> <BR>
+<div align="justify"><font color="#7300fd" size="2" face="Open Sans"> <BR>
 
-  <p> This work studies the problem of testing monotonicity of Boolean-valued functions over the d-dimensional, n-width hypergrid. For the special case of n = 2 (the hypercube), a seminal work of Khot-Minzer-Safra (SICOMP 2018) showed that you can test with essentially d^{1/2} queries and this is optimal among all non-adaptive testers (Chen-Waingarten-Xie STOC 2017). To analyze their tester, they proved a directed analogue of Talagrand's isoperimetric inequality for Boolean functions from 1993. In our paper from STOC 2023 we generalized the directed Talagrand inequality to hypergrids and using this we analyzed a tester that makes n*d^{1/2} queries. </p>
+  <p> This work studies the problem of testing monotonicity of Boolean-valued functions over the <i>d</i>-dimensional, <i>n</i>-width hypergrid. For the special case of <i>n = 2</i> (the hypercube), a seminal work of Khot-Minzer-Safra (SICOMP 2018) showed that you can test with essentially <i>d<sup>1/2</sup></i> queries and this is optimal among all non-adaptive testers (Chen-Waingarten-Xie STOC 2017). In our paper from STOC 2023 we obtained such a tester that makes <i>n&radic;d</i> queries. </p>
 
-  <p> <i> Can we remove the dependence on n from our STOC 2023 result and obtain a monotonicity tester for Boolean-valued functions over hypergrids that makes d^{1/2} queries, matching the upper and lower bound for the n = 2 case? </i> </p>
+  <p> <i> Can we remove the dependence on n from our STOC 2023 result and obtain a monotonicity tester for Boolean-valued functions over hypergrids that makes <i>&radic;d</i> queries, matching the upper and lower bound for the <i>n = 2</i> case? </i> </p>
 
-  <p> Our main result is a non-adaptive, 1-sided error monotonicity tester for such functions that makes d^{1/2 + o(1)} queries, thus resolving the non-adaptive monotonicity testing question for all values of n, up to a d^{o(1)} factor. Central to our analysis is the inequality obtained in our STOC 2023 paper and our Domain Reduction Theorem from our SODA 2020 paper. We also introduce many new technical ingredients that allow us to replace n by d^{o(1)} in the query complexity. </p>
+  <p> Our main result is a monotonicity tester for such functions that makes <i>d<sup>1/2+o(1)</sup></i> queries, thus resolving the non-adaptive monotonicity testing question for all values of <i>n</i>, up to a <i>d<sup>o(1)</sup></i> factor. Central to our analysis is the inequality obtained in our STOC 2023 paper and our Domain Reduction Theorem from our SODA 2020 paper. We also introduce many new technical ingredients that allow us to replace <i>n</i> by <i>d<sup>o(1)</sup></i> in the query complexity. </p>
 
   <!-- <p> Monotonicity testing of Boolean functions on the hypergrid, $f:[n]^d \to \{0,1\}$, is a classic topic in property testing. Determining the non-adaptive complexity of this problem is an important open question. For arbitrary $n$, [Black-Chakrabarty-Seshadhri, SODA 2020] describe a tester with query complexity $\widetilde{O}(\varepsilon^{-4/3}d^{5/6})$. This complexity is independent of $n$, but has a suboptimal dependence on $d$. Recently, [Braverman-Khot-Kindler-Minzer, ITCS 2023] and [Black-Chakrabarty-Seshadhri, STOC 2023] describe $\widetilde{O}(\varepsilon^{-2} n^3\sqrt{d})$ and $\widetilde{O}(\varepsilon^{-2} n\sqrt{d})$-query testers, respectively. These testers have an almost optimal dependence on $d$, but a suboptimal polynomial dependence on $n$. </p>
 
@@ -195,9 +243,9 @@
 <ul>
 
 <dt class="title">  &#8226; <b> Directed Isoperimetric Theorems for Boolean Functions on the Hypergrid
-and an ~O(n\sqrt{d}) Monotonicity Tester</b> </dt> 
+and an  <i>O<sup>&sim;</sup>(n&radic;d)</i> Monotonicity Tester</b> </dt> 
 <dt class="author"> Hadley Black, Deeparnab Chakrabarty, and C. Seshadhri</dt>
-<font size="3" color="#CB4335"> <i> Symposium on Theory of Computing (<b>STOC</b>) 2023. </i> </font>
+<font size="3" color="#f34e4e"> <i> Symposium on Theory of Computing (<b>STOC</b>) 2023. </i> </font>
 <dt> 
 [<A HREF="https://arxiv.org/abs/2211.05281">arXiv</A>] 
 &nbsp; &nbsp; [<A HREF="https://eccc.weizmann.ac.il/report/2022/162/">ECCC</A>] 
@@ -206,13 +254,13 @@ and an ~O(n\sqrt{d}) Monotonicity Tester</b> </dt>
 
 
 <div id="threshold-talagrand" style="display: none">
-<div align="justify"><font color="#006400" size="3" face="Times"> <BR>
+<div align="justify"><font color="#7300fd" size="2" face="Open Sans"> <BR>
 
-  <p> This work studies the problem of testing monotonicity of Boolean-valued functions over the d-dimensional, n-width hypergrid. For the special case of n = 2 (the hypercube), a seminal work of Khot-Minzer-Safra (SICOMP 2018) showed that you can test with essentially d^{1/2} queries. To analyze their tester, they proved a directed analogue of Talagrand's isoperimetric inequality for Boolean functions from 1993. Previous works of ours from SODA 2018 and SODA 2020 showed that for general hypergrids (arbitrary n) there is a d^{5/6} query tester (ignoring poly(log(d),epsilon) factors). This result was obtained by proving a directed analogue of an inequality by Margulis for hypergrids. The Margulis inequality is weaker than the Talagrand inequality and so a natural next step in this line of inquiry was to try to generalize Khot-Minzer-Safra's directed Talagrand inequality to hypergrids. </p>
+  <p> This work studies the problem of testing monotonicity of Boolean-valued functions over the <i>d</i>-dimensional, <i>n</i>-width hypergrid. For the special case of <i>n = 2</i> (the hypercube), a seminal work of Khot-Minzer-Safra (SICOMP 2018) showed that you can test with essentially <i>&radic;d</i> queries. To analyze their tester, they proved a directed analogue of Talagrand's isoperimetric inequality for Boolean functions from 1993. Previous works of ours from SODA 2018 and SODA 2020 showed that for general hypergrids (arbitrary <i>n</i>) there is a <i>d<sup>5/6</sup></i> query tester. This result was obtained by proving a directed analogue of an inequality by Margulis for hypergrids. The Margulis inequality is weaker than the Talagrand inequality and so a natural next step in this line of inquiry was to try to generalize Khot-Minzer-Safra's directed Talagrand inequality to hypergrids. </p>
 
-  <p><i> Is there a generalization of the directed Talagrand inequality for hypergrids? Can we test monotonicity of Boolean-valued functions over the d-dimensional, n-width hypergrid with d^{1/2} queries? </i></p>
+  <p><i> Is there a generalization of the directed Talagrand inequality for hypergrids? Can we test monotonicity of Boolean-valued functions over the <i>d</i>-dimensional, <i>n</i>-width hypergrid with <i>d<sup>1/2</sup></i> queries? </i></p>
 
-  <p> In this paper, we prove a generalization of the directed Talagrand inequality for hypergrids and use it to analyze a tester for Boolean functions on this domain which makes n*d^{1/2} queries. This is the first result to achieve the optimal dependence on d for any n > 2. </p>
+  <p> In this paper, we prove a generalization of the directed Talagrand inequality for hypergrids and use it to analyze a tester for Boolean functions on this domain which makes <i>n&radic;d</i> queries. This is the first result to achieve the optimal dependence on <i>d</i> for any <i>n > 2</i>. </p>
 
   <!-- <p> The problem of testing monotonicity for Boolean functions on the hypergrid, $f:[n]^d \to \{0,1\}$ is a classic topic in property testing. When $n=2$, the domain is the hypercube. For the hypercube case, a breakthrough result of Khot-Minzer-Safra (FOCS 2015) gave a non-adaptive, one-sided tester making $\otilde(\eps^{-2}\sqrt{d})$ queries. Up to polylog $d$ and $\eps$ factors, this bound matches the $\widetilde{\Omega}(\sqrt{d})$-query non-adaptive lower bound (Chen-De-Servedio-Tan (STOC 2015), Chen-Waingarten-Xie (STOC 2017)). For any $n > 2$, the optimal non-adaptive complexity was unknown. A previous result of the authors achieves a $\otilde(d^{5/6})$-query upper bound (SODA 2020), quite far from the $\sqrt{d}$ bound for the hypercube. </p>
 
@@ -232,9 +280,9 @@ and an ~O(n\sqrt{d}) Monotonicity Tester</b> </dt>
 
 <dt class="title">  &#8226; <b> Isoperimetric Inequalities for Real-Valued Functions with Applications to Monotonicity Testing</b> </dt> 
 <dt class="author"> Hadley Black, Iden Kalemaj, and Sofya Raskhodnikova</dt>
-<font size="3" color="#CB4335"> <i> Random Structures and Algorithms (<b>RSA</b>) 2024. </i> </font> 
+<font size="3" color="#f34e4e"> <i> Random Structures and Algorithms (<b>RSA</b>) 2024. </i> </font> 
 <dt>
-<font size="3" color="#CB4335"> Preliminary version in <i> International Colloquium on Automata, Languages, and Programming (<b>ICALP</b>) 2023. </i> </font>
+<font size="3" color="#f34e4e"> Preliminary version in <i> International Colloquium on Automata, Languages, and Programming (<b>ICALP</b>) 2023. </i> </font>
 <dt> 
 [<A HREF="https://arxiv.org/abs/2011.09441">arXiv</A>]
 &nbsp; &nbsp; [<A HREF="https://eccc.weizmann.ac.il/report/2020/174/">ECCC</A>] 
@@ -244,15 +292,15 @@ and an ~O(n\sqrt{d}) Monotonicity Tester</b> </dt>
 
 
 <div id="real-talagrand" style="display: none">
-<div align="justify"><font color="#006400" size="3" face="Times"> <BR>
+<div align="justify"><font color="#7300fd" size="2" face="Open Sans"> <BR>
 
-  <p> Monotonicity testing of Boolean functions over the hypercube domain has been studied extensively since its introduction by Goldreich-Goldwasser-Lehman-Ron-Samorodnitsky in 1999. A seminal work of Khot-Minzer-Safra (SICOMP 2018) showed that you can test with essentially d^{1/2} queries. To analyze their tester, they proved a directed analogue of Talagrand's isoperimetric inequality for Boolean functions from 1993. In contrast, the complexity of monotonicity testing of <i>real-valued</i> functions over the hypercube has been established as Theta(d) with matching upper and lower bounds (Chakrabarty-Seshadhri 2013, Blais-Brody-Matulef 2012), although the lower bound relies on a family of functions with a large range. </p>
+  <p> Monotonicity testing of Boolean functions over the hypercube domain has been studied extensively since its introduction by Goldreich-Goldwasser-Lehman-Ron-Samorodnitsky in 1999. A seminal work of Khot-Minzer-Safra (SICOMP 2018) showed that you can test with essentially <i>&radic;d</i> queries. To analyze their tester, they proved a directed analogue of Talagrand's isoperimetric inequality for Boolean functions from 1993. In contrast, the complexity of monotonicity testing of <i>real-valued</i> functions over the hypercube has been established as <i>&Theta;(d)</i> with matching upper and lower bounds (Chakrabarty-Seshadhri 2013, Blais-Brody-Matulef 2012), although the lower bound relies on a family of functions with a large range. </p>
 
-  <p> <i> What is the complexity of testing monotonicity of functions over the hypercube with range size at most r? Do the known directed isoperimetric inequalities extend beyond the Boolean range? </i> </p>
+  <p> <i> What is the complexity of testing monotonicity of functions over the hypercube with range size at most <i>r</i>? Do the known directed isoperimetric inequalities extend beyond the Boolean range? </i> </p>
 
-  <p> Our main result is a generalization of Khot-Minzer-Safra's directed Talagrand inequality to <i>real-valued</i> functions whose range consists of any number of elements. To obtain this generalization we prove what we call the Boolean Decomposition Theorem, which informally says that any real-valued function f over any DAG G can be "decomposed" into a collection of {0,1}-valued functions f_1,...,f_k over G which (a) collectively "preserve" the distance to monotonicity of f and (b) any edge that violates monotonicity of f_i also is a violation for f. This allows us to "lift" known inequalities for Boolean functions to real-valued functions. </p>
+  <p> Our main result is a generalization of Khot-Minzer-Safra's directed Talagrand inequality to <i>real-valued</i> functions whose range consists of any number of elements. To obtain this generalization we prove what we call the Boolean Decomposition Theorem which allows us to "lift" known inequalities for Boolean functions to real-valued functions. Using our generalized directed Talagrand inequality we obtain an optimal tester for functions with range size <i>r</i>. Prior to our work it wasn't known whether such testers exist even for <i>r = 3</i>. </p>
 
-  <p> Using our generalized directed Talagrand inequality we establish the following two results. (a) We give a non-adaptive, 1-sided error monotonicity tester for functions over the hypercube with range size at most r that makes r sqrt(d) queries and show a matching lower bound for this class of testers. (b) We give an algorithm for approximating the distance to monotonicity of real-valued functions that matches the state of the art for Boolean functions. </p>
+  <!-- <p> Using our generalized directed Talagrand inequality we establish the following two results. (a) We give a non-adaptive, 1-sided error monotonicity tester for functions over the hypercube with range size at most r that makes r sqrt(d) queries and show a matching lower bound for this class of testers. (b) We give an algorithm for approximating the distance to monotonicity of real-valued functions that matches the state of the art for Boolean functions. </p> -->
 
 
   <!-- <p> We generalize the celebrated isoperimetric inequality of Khot, Minzer, and Safra (SICOMP 2018) for Boolean functions to the case of real-valued functions $f \colon \{0,1\}^d\to\mathbb{R}$. Our main tool in the proof of the generalized inequality is a new Boolean decomposition that represents every real-valued function $f$ over an arbitrary partially ordered domain as a collection of Boolean functions over the same domain, roughly capturing the distance of $f$ to monotonicity and the structure of violations of $f$ to monotonicity. </p>
@@ -273,7 +321,7 @@ and an ~O(n\sqrt{d}) Monotonicity Tester</b> </dt>
 
 <dt class="title">  &#8226; <b> Domain Reduction for Monotonicity Testing: A <i>o(d)</i> Tester for Boolean Functions in <i>d</i>-Dimensions </b> </dt> 
 <dt class="author"> Hadley Black, Deeparnab Chakrabarty, and C. Seshadhri</dt>
-<font size="3" color="#CB4335"> <i> Symposium on Discrete Algorithms (<b>SODA</b>) 2020. </i> </font>
+<font size="3" color="#f34e4e"> <i> Symposium on Discrete Algorithms (<b>SODA</b>) 2020. </i> </font>
 <dt> 
 [<A HREF="https://arxiv.org/abs/1811.01427">arXiv</A>]
 &nbsp; &nbsp; [<A HREF="https://eccc.weizmann.ac.il/report/2018/187/">ECCC</A>] 
@@ -282,12 +330,14 @@ and an ~O(n\sqrt{d}) Monotonicity Tester</b> </dt>
 
 
 <div id="domain-reduction" style="display: none">
-<div align="justify"><font color="#006400" size="3" face="Times"> <BR>
-  <p> This work studies the problem of monotonicity testing of Boolean-valued functions over the d-dimensional, n-width hypergrid. A previous work of ours from SODA 2018 showed that there is a o(d) polylog(n) query tester. Other prior work (Dodis-Goldreich-Lehman-Raskhodnikova-Ron-Samorodnitsky 1999, Berman-Raskhodnikova-Yaroslavtsev 2014) showed that O(d) queries are possible with no dependence on n. </p> 
+<div align="justify"><font color="#7300fd" size="2" face="Open Sans"> <BR>
+  <p> This work studies the problem of monotonicity testing of Boolean-valued functions over the <i>d</i>-dimensional, <i>n</i>-width hypergrid. A previous work of ours from SODA 2018 showed that there is a <i>o(d) polylog(n)</i> query tester. Other prior work (Dodis-Goldreich-Lehman-Raskhodnikova-Ron-Samorodnitsky 1999, Berman-Raskhodnikova-Yaroslavtsev 2014) showed that <i>O(d)</i> queries are possible with no dependence on <i>n</i>. </p> 
 
-  <p> <i> Can we remove the polylog(n) dependence from our SODA 2018 result, and more generally is there a black-box method for removing dependencies on n? If so, can testing results over hypergrids be extended to continuous space?</i> </p>
+  <p> <i> Can we remove the <i>polylog(n)</i> dependence from our SODA 2018 result, and more generally is there a black-box method for removing dependencies on <i>n</i>? If so, can testing results over hypergrids be extended to continuous space?</i> </p>
 
-  <p> In this paper we showed that n can be replaced by poly(d) in a black-box fashion, thus implying a o(d) tester with no dependence on n by combining with our previous paper. The theorem that achieves this reduction is our main contribution, which we call the Domain Reduction Theorem which says the following. Suppose f is a Boolean-valued function over the d-dimensional, n-width hypergrid. Now sub-sample k values from [n] iid in each dimension and consider the restriction of f to the resulting d-dimensional, k-width sub-hypergrid. We prove that if k > poly(d/epsilon), then the distance to monotonicity is preserved by the restriction, up to a constant factor. Therefore, it suffices to test for monotonicity of the restriction, replacing any dependence on n by a dependence on k. Using standard measure-theoretic tools we are also able to extend the Domain Reduction Theorem and testing result to apply to measurable Boolean-valued functions over d-dimensional continuous space under product distributions. </p>  
+  <p> In this paper we showed that <i>n</i> can be replaced by <i>poly(d)</i> in a black-box fashion, thus implying a <i>o(d)</i> tester with no dependence on <i>n</i> by combining with our previous paper. The theorem that achieves this reduction is our main contribution, which we call the Domain Reduction Theorem. Going beyond the hypergrid, we also prove a version of this theorem over <i>d</i>-dimensional continuous spaces and attain a <i>o(d)</i> query tester for this domain. </p>  
+
+  <!--  which says the following. Suppose f is a Boolean-valued function over the d-dimensional, n-width hypergrid. Now sub-sample k values from [n] iid in each dimension and consider the restriction of f to the resulting d-dimensional, k-width sub-hypergrid. We prove that if k > poly(d/epsilon), then the distance to monotonicity is preserved by the restriction, up to a constant factor. Therefore, it suffices to test for monotonicity of the restriction, replacing any dependence on n by a dependence on k. Using standard measure-theoretic tools we are also able to extend the Domain Reduction Theorem and testing result to apply to measurable Boolean-valued functions over d-dimensional continuous space under product distributions. -->
 
   <!-- <p> We describe a $\tilde{O}(d^{5/6})$-query monotonicity tester for Boolean functions $f:[n]^d \to \{0,1\}$ on the $n$-hypergrid. This is the first $o(d)$ monotonicity tester with query complexity independent of $n$. Motivated by this independence of $n$, we initiate the study of monotonicity testing of measurable Boolean functions $f:\mathbb{R}^d \to \{0,1\}$ over the continuous domain, where the distance is measured with respect to a product distribution over $\mathbb{R}^d$. We give a $\tilde{O}(d^{5/6})$-query monotonicity tester for such functions. </p>
 
@@ -309,7 +359,7 @@ and an ~O(n\sqrt{d}) Monotonicity Tester</b> </dt>
 
 <dt class="title">  &#8226; <b> A <i>o(d)</i> polylog <i>n</i> Monotonicity Tester for Boolean Functions over the Hypergrid <i>[n]<sup>d</sup></i> </b> </dt> 
 <dt class="author"> Hadley Black, Deeparnab Chakrabarty, and C. Seshadhri</dt>
-<font size="3" color="#CB4335"> <i> Symposium on Discrete Algorithms (<b>SODA</b>) 2018. </i> </font>
+<font size="3" color="#f34e4e"> <i> Symposium on Discrete Algorithms (<b>SODA</b>) 2018. </i> </font>
 <dt>
 [<A HREF="https://arxiv.org/abs/1710.10545">arXiv</A>]
 &nbsp; &nbsp; [<A HREF="https://eccc.weizmann.ac.il/report/2017/159/">ECCC</A>]
@@ -318,12 +368,12 @@ and an ~O(n\sqrt{d}) Monotonicity Tester</b> </dt>
 
 
 <div id="monotonicity" style="display: none">
-<div align="justify"><font color="#006400" size="3" face="Times"> <BR>
-  <p> This work studies the problem of monotonicity testing of Boolean-valued functions over the d-dimensional, n-width hypergrid. Prior to this paper the best known testers had query complexity linear in d, and independent of n. For the special case of n = 2, it was known that o(d)-query testers are possible by exploiting a beautiful connection to isoperimetric inequalities from the theory of Boolean functions. </p>
+<div align="justify"><font color="#7300fd" size="2" face="Open Sans"> <BR>
+  <p> This work studies the problem of monotonicity testing of Boolean-valued functions over the <i>d</i>-dimensional, <i>n</i>-width hypergrid. Prior to this paper the best known testers had query complexity linear in <i>d</i>, and independent of <i>n</i>. For the special case of <i>n = 2</i>, it was known that <i>o(d)</i>-query testers are possible by exploiting a connection to isoperimetric inequalities for Boolean functions. </p>
 
-  </p><i>To what extent does this connection extend to hypergrids and can we achieve o(d) query testers? </i></p>
+  </p><i>To what extent does this connection extend to hypergrids and can we achieve <i>o(d)</i> query testers? </i></p>
 
-  <p>In this paper we gave the first tester for the setting of arbitrary n > 2 with query complexity sublinear in d, although with a poly-logarithmic depedendence on n. Our tester is non-adaptive and has 1-sided error. The main technical contribution is a directed Margulis-style isoperimetric inequality for hypergrids, generalizing an inequality proven by Chakrabarty-Seshadhri (STOC 2013) who obtained the first sublinear in d tester for the hypercube (n = 2) setting.
+  <p>In this paper we gave the first tester for the setting of arbitrary <i>n > 2</i> with query complexity sublinear in <i>d</i>, although with a poly-logarithmic depedendence on <i>n</i>. The main technical contribution is a directed Margulis-style isoperimetric inequality for hypergrids, generalizing a result from the hypercube setting by Chakrabarty-Seshadhri (STOC 2013).
   </p>  
   <!-- <p> We study monotonicity testing of Boolean functions over the hypergrid [n]^d and design a non-adaptive tester with 1-sided error whose query complexity is O(d^{5/6}) \poly(\log n,1/\eps). Previous to our work, the best known testers had query complexity linear in d but independent of n. We improve upon these testers as long as n = 2^{d^{o(1)}}. </p>
 

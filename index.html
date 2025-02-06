@@ -85,12 +85,35 @@ I am a postdoc in the Computer Science department at UCSD, affiliated with the <
 <hr> 
 
 
-<h2>Publications</h2>
+<h2>Preprints</h2>
+
+<!----------------------------- Graph Learning - CC queries --------------------------------------------------->
+
+<ul> 
+  <dt class="title"> <b> Optimal Graph Reconstruction by Counting Connected Components in Induced Subgraphs </b> </dt> 
+  <dt class="author"> Hadley Black, Arya Mazumdar, Barna Saha, Yinzhan Xu </dt>
+  <font size="3" color="#000000"> <i> Preprint, 2025. </i> </font>
+  <dt> 
+
+  [<a href="javascript:toggle('GR-CC-queries')">short summary</a>]
+  
+
+<div id="GR-CC-queries" style="display: none">
+<div> <font color="#7300fd" size="2" face="Open Sans"> <BR>
+
+  <p> We study the graph reconstruction problem where one wishes to learn the edge-set of a graph using access to an oracle which returns partial information about a subset (or subsets) of vertices. This line of work began in the late 90's with the edge-detection query model, where the oracle returns whether or not a queried set of vertices contains an edge. There are various ways to strengthen this model. In particular, there have been many works studying additive queries (returns the number of edges in a chosen induced subgraph), cross-additive queries (returns the number of edges between two chosen disjoint sets of vertices), and very recently maximal independent set queries (returns some maximal independent set in a chosen induced subgraph). </p>
+
+
+  <p> In this work we introduce a new query model, where the oracle returns the <i>number of connected components</i> in a chosen induced subgraph. We prove matching upper and lower bounds for the query complexity of graph reconstruction in this model. Moreover, we show that this model is notably different from previously studied models in terms of the amount of adaptivity needed for efficient algorithms (i.e. round complexity). </p>
+
+</font></div> </div>
+
+</ul> 
 
 <!----------------------------- Partition Learning - adaptivity and size --------------------------------------------------->
 
 <ul> 
-  <dt class="title"> <b> Learning Partitions with Simple Queries: Minimizing Complexity, Adaptivity, and Size </b> </dt> 
+  <dt class="title"> <b> Learning Partitions with Optimal Query and Round Complexities </b> </dt> 
   <dt class="author"> Hadley Black, Arya Mazumdar, Barna Saha </dt>
   <font size="3" color="#000000"> <i> Preprint, 2024. </i> </font>
   <dt> 
@@ -113,6 +136,8 @@ I am a postdoc in the Computer Science department at UCSD, affiliated with the <
 </font></div> </div>
 
 </ul> 
+
+<h2>Publications</h2>
 
 <!----------------------------- Clustering w Subset Queries --------------------------------------------------->
 
